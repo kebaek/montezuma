@@ -10,7 +10,7 @@ import numpy as np
 
 import utils
 from model import ACModel, QModel
-from gym_minigrid.wrappers import FullyObsWrapper
+#from gym_minigrid.wrappers import FullyObsWrapper
 
 
 # Parse arguments
@@ -110,7 +110,8 @@ txt_logger.info(f"Device: {device}\n")
 #     envs.append(utils.make_env(args.env, args.seed + 10000 * i))
 envs = []
 for i in range(args.procs):
-    env = FullyObsWrapper(utils.make_env(args.env, args.seed + 10000 * i))
+    #env = FullyObsWrapper(utils.make_env(args.env, args.seed + 10000 * i))
+    env = utils.make_env(args.env, args.seed + 10000 * i)
     envs.append(env)
 txt_logger.info("Environments loaded\n")
 
