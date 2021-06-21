@@ -204,6 +204,7 @@ class BaseAlgo(ABC):
                     for i in range(self.num_frames_per_proc)]
         if self.acmodel.recurrent:
             # T x P x D -> P x T x D -> (P * T) x D
+            print(self.memories.shape)
             exps.memory = self.memories.transpose(0, 1).reshape(-1, *self.memories.shape[2:])
             # T x P -> P x T -> (P * T) x 1
             exps.mask = self.masks.transpose(0, 1).reshape(-1).unsqueeze(1)
