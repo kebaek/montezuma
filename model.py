@@ -89,7 +89,7 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
             nn.Linear(self.embedding_size, 256),
             nn.ReLU(),
             nn.Linear(256, 256),
-            nn.ReLU()
+            nn.ReLU(),
             nn.Linear(256, 256),
             nn.ReLU(),
             nn.Linear(256, 128),
@@ -103,7 +103,7 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
             nn.Linear(self.embedding_size, 256),
             nn.ReLU(),
             nn.Linear(256, 256),
-            nn.ReLU()
+            nn.ReLU(),
             nn.Linear(256, 256),
             nn.ReLU(),
             nn.Linear(256, 128),
