@@ -5,7 +5,6 @@ import torch
 from torch_ac.utils.penv import ParallelEnv
 import numpy as np
 import utils
-from gym_minigrid.wrappers import FullyObsWrapper
 import csv
 
 
