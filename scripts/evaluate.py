@@ -46,7 +46,7 @@ print(f"Device: {device}\n")
 
 envs = []
 for i in range(args.procs):
-    env = FullyObsWrapper(utils.make_env(args.env, args.seed + 10000 * i))
+    env = utils.make_env(args.env, args.seed + 10000 * i)
     envs.append(env)
 env = ParallelEnv(envs)
 print("Environments loaded\n")
